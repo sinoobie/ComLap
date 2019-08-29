@@ -1,4 +1,4 @@
-import base64,marshal,os,sys
+import base64,marshal,os,click
 from uncompyle6 import main
 
 class Com:
@@ -25,11 +25,18 @@ class Com:
 		self.cout+=1
 		self.mars(de)
 
+os.system('clear')
+print("""
+		#####################
+		# Compiler Berlapis #
+		#  By KANG-NEWBIE   #
+		#####################
+		""")
 try:
 	ofile=input("[?] File ORI: ")
 	juml=int(input("[?] Jumlah compile: "))
 	if juml > 10:
-		input("[WARM] Anda memasukan jumlah lebih dari 10, itu bisa membuat size file membengkak! [ENTER]")
+		click.pause("[WARM] Anda memasukan jumlah lebih dari 10, itu bisa membuat size file membengkak! [ENTER]")
 	Com(ofile,juml)
 	pil=input("[?] Compile ke bytes code (y/n) ")
 	if pil.lower() == 'y':

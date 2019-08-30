@@ -9,7 +9,7 @@ class Com:
 		self.mars(open(fil,'r').read())
 
 	def mars(self,strg):
-		x=compile(strg,'win','exec')
+		x=compile(strg,'<script>','exec')
 		xx=marshal.dumps(x)
 		xxx=f"#Compile Berlapis\n#By KANG-NEWBIE\n\nimport marshal\nexec(marshal.loads({xx}))"
 		if self.cout == self.jml:
